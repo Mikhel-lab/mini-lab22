@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ip address validator</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <section class="jumbotron col-md-6">
+        <h1>Validation of IP Address</h1>
+        <div class="container">	
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <h2 class="bg-info text-white">Enter your Address</h2>
+                    <form>
+                        <input class="form-control" type="text" id="IpValidator" placeholder="please enter a valid ipAddress"> 
+                        <label id="display"></label> 
+                    </form>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+	
+
+	
+
+
+ <script>  
+           const IpAddress = document.querySelector('#IpValidator');
+           const displayIpAddress = document.querySelector('#display');
+
+IpAddress.addEventListener('keypress', show);
+function show(){
+    let IpAdress = IpAddress.value;
+    let pattern = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    if(pattern.test(IpAdress)){				
+        displayIpAddress.innerHTML= "VALID!";
+    }else{				
+        displayIpAddress.innerHTML= "INVALID! PLEASE ENTER A VALID IP ADDRESS";
+    }
+}
+</script>	
+
+</body>
+</html>
+
+
+
+
+

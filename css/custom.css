@@ -1,0 +1,14 @@
+#container{
+	border: 1px solid;
+	margin: auto;
+	width: 500px;
+	height: 200px;
+    padding: 40px;
+    background-size: auto;
+}
+input{
+	width: 60%;
+}
+.jumbotron{
+    background-color: coral;
+}
